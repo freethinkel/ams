@@ -1,10 +1,13 @@
+@import '~assets/colors'
 
 :host
 	position fixed 
 	top 0
 	display block
 	width 100%
-	background-color red
+	background-color $blue
+	box-shadow 0 3px 5px -1px rgba($blue, 0.3)
+
 .header-wrapper	
 	display flex
 	height 50px
@@ -24,5 +27,17 @@
 	align-items center
 	color #fff
 
-.link-wrapper 
-	margin-left 15px
+.link 
+	&-wrapper 
+		margin-left 15px
+	&-header
+		height 47px
+		line-height 50px
+		padding 0 15px
+		display inline-block
+		border-bottom 3px solid transparent
+		transition 0.3s all
+		&-active
+			border-bottom 3px solid #fff
+		&:hover 
+			border-bottom 3px solid #fff
